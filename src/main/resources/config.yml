@@ -1,0 +1,7 @@
+# Example (worlds is required):
+#worlds:
+#  world:
+#    - SPAWNER
+#  world_nether:
+#    - SPAWNER
+worlds:

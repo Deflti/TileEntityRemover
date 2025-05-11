@@ -1,0 +1,24 @@
+name: TileEntityRemover
+version: '${project.version}'
+main: me.kira.tileentityremover.TileEntityRemover
+api-version: '1.21'
+description: 'A plugin to remove tile entities.'
+authors:
+  - '_IamKira'
+commands:
+  reload_tile-entity-remover:
+    description: 'Reload the TileEntityRemover plugin configuration.'
+  disable_tile-entity-remover:
+    description: 'Disables the TileEntityRemover plugin'
+  enable_tile-entity-remover:
+    description: 'Enables the TileEntityRemover plugin'
+permissions:
+  TileEntityRemover.reload:
+    description: 'Allows reloading the TileEntityRemover plugin configuration.'
+    default: op
+  TileEntityRemover.disable:
+    description: 'Allows disabling the TileEntityRemover plugin'
+    default: op
+  TileEntityRemover.enable:
+    description: 'Allows enabling the TileEntityRemover plugin'
+    default: op
