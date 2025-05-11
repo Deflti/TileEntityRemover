@@ -20,10 +20,20 @@ TileEntityRemover is a high-performance Minecraft plugin that automatically remo
 2. Restart your server.  
 3. A default `config.yml` will be generated in the `TileEntityRemover` plugin folder.  
 4. Configure tile entities to remove under the `worlds:` section. Example:
-
    ```yaml
    worlds:
      world:
        - SPAWNER
      world_nether:
        - SPAWNER
+5. Save the file and reload the configuration using the `/reload_tile-entity-remover` command.
+
+## Commands
+
+`/reload_tile-entity-remover`
+`/disable_tile-entity-remover`
+`/enable_tile-entity-remover`
+
+## Permissions
+
+To execute commands, a player must have the corresponding permissions. By default, all permissions are granted to `OPs`.
