@@ -29,17 +29,17 @@ public class ChunkLoadListener implements Listener{
         Tile_world_configurations.clear();
         FileConfiguration config = plugin.getConfig();
 
-        ConfigurationSection worldsSection = config.getConfigurationSection("worlds");
+        final ConfigurationSection worldsSection = config.getConfigurationSection("worlds");
 
         if (worldsSection == null || worldsSection.getKeys(false).isEmpty()) {
             plugin.getLogger().warning("No worlds found in config or no world added to worlds.");
             return;
         }
 
-        Set<String> worlds = worldsSection.getKeys(false);
+        final Set<String> worlds = worldsSection.getKeys(false);
 
         for (String world : worlds) {
-            List<String> world_entities = config.getStringList("worlds." + world);
+            final List<String> world_entities = config.getStringList("worlds." + world);
 
             final BitSet Tile_entities = new BitSet();
 
@@ -62,14 +62,14 @@ public class ChunkLoadListener implements Listener{
     public void onChunkLoad(ChunkLoadEvent event) {
         if (!this.isActive) return;
 
-        BitSet current_world_configurations = Tile_world_configurations.get(event.getWorld().getName());
+        final BitSet current_world_configurations = Tile_world_configurations.get(event.getWorld().getName());
 
         if (current_world_configurations == null) return;
 
-        BlockState[] tileEntities = event.getChunk().getTileEntities();
+        final BlockState[] tileEntities = event.getChunk().getTileEntities();
 
         for(BlockState state : tileEntities) {
-            Block block = state.getBlock();
+           Block block = state.getBlock();
             if (current_world_configurations.get(block.getType().ordinal())) {
                 block.setType(Material.AIR, false);
             }
