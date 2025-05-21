@@ -70,9 +70,9 @@ public class ChunkLoadListener implements Listener{
 
         for(BlockState state : tileEntities) {
            Block block = state.getBlock();
-            if (current_world_configurations.get(block.getType().ordinal())) {
-                block.setType(Material.AIR, false);
-            }
+           if (current_world_configurations.get(block.getType().ordinal())) {
+               block.setType(Material.AIR, false);
+           }
         }
     }
 
